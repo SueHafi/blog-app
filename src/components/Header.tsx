@@ -22,7 +22,11 @@ interface Props {
 }
 
 const drawerWidth = 240;
-const navItems = [{label:"Home", href: "/"},{label: "Login", href: "/"},{label: "Create Post", href: "/new"}];
+const navItems = [
+  { label: "Home", href: "/" },
+  { label: "Login", href: "/" },
+  { label: "Create Post", href: "/new" },
+];
 
 export default function DrawerAppBar(props: Props) {
   const { window } = props;
@@ -58,7 +62,7 @@ export default function DrawerAppBar(props: Props) {
       <AppBar component="nav">
         <Toolbar>
           <IconButton
-            color="inherit"
+            color="primary"
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
@@ -105,3 +109,22 @@ export default function DrawerAppBar(props: Props) {
     </Box>
   );
 }
+
+// leave code here for a moment
+
+// theme: {
+//   palette: {
+//     primary: {
+//       light: string;
+//       main: string;
+//       dark: string;
+//       contrastText: string;
+//     };
+//     secondary: {
+//       light: string;
+//       main: string;
+//       dark: string;
+//       contrastText: string;
+//     };
+//   };
+// };
