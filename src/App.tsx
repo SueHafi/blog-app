@@ -4,7 +4,8 @@ import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
 import Header from "./components/Header";
 import CssBaseline from "@mui/material/CssBaseline";
-import { ThemeProvider, createTheme } from '@mui/material/styles';
+import { ThemeProvider, createTheme } from "@mui/material/styles";
+import Typography from "@mui/material/Typography";
 
 const theme = createTheme({
   palette: {
@@ -28,6 +29,9 @@ function App() {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Header></Header>
+      <Typography variant="h2" component="h1" align="center" gutterBottom>
+        Articles
+      </Typography>
     </ThemeProvider>
   );
 }

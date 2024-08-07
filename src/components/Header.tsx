@@ -54,7 +54,7 @@ export default function Header(props: HeaderProps) {
     window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Box sx={{ display: "flex" }}>
+    <Box sx={{ display: "flex", p: 5 }}>
       <AppBar component="nav">
         <Toolbar>
           <IconButton
