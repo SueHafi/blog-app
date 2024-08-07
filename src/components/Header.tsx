@@ -13,11 +13,7 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 
-interface Props {
-  /**
-   * Injected by the documentation to work in an iframe.
-   * You won't need it on your project.
-   */
+type HeaderProps = {
   window?: () => Window;
 }
 
@@ -28,7 +24,7 @@ const navItems = [
   { label: "Create Post", href: "/new" },
 ];
 
-export default function DrawerAppBar(props: Props) {
+export default function Header(props: HeaderProps) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
@@ -62,7 +58,6 @@ export default function DrawerAppBar(props: Props) {
       <AppBar component="nav">
         <Toolbar>
           <IconButton
-            color="primary"
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
@@ -93,7 +88,7 @@ export default function DrawerAppBar(props: Props) {
           open={mobileOpen}
           onClose={handleDrawerToggle}
           ModalProps={{
-            keepMounted: true, // Better open performance on mobile.
+            keepMounted: true,
           }}
           sx={{
             display: { xs: "block", sm: "none" },
@@ -109,22 +104,3 @@ export default function DrawerAppBar(props: Props) {
     </Box>
   );
 }
-
-// leave code here for a moment
-
-// theme: {
-//   palette: {
-//     primary: {
-//       light: string;
-//       main: string;
-//       dark: string;
-//       contrastText: string;
-//     };
-//     secondary: {
-//       light: string;
-//       main: string;
-//       dark: string;
-//       contrastText: string;
-//     };
-//   };
-// };
