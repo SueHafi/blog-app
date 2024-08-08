@@ -6,12 +6,12 @@ import { Button, CardActionArea, CardActions } from "@mui/material";
 
 export default function Card() {
   return (
-    <MuiCard sx={{ maxWidth: 500 }}>
+    <MuiCard >
       <CardActionArea>
         <CardMedia
           component="img"
-          height="400"
-          image="/assests/mobile.jpg"
+          height="200"
+          image="/blogImages/mobile.jpg"
           alt="test image"
         />
         <CardContent>

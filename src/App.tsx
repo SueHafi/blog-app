@@ -2,9 +2,8 @@ import "@fontsource/roboto/300.css";
 import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
-import Header from "./components/Header";
-import Card from "./components/Card";
-import Box from "@mui/material/Box";
+// import Home from "./components/Home";
+import Article from "./components/Article";
 import CssBaseline from "@mui/material/CssBaseline";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 
@@ -29,15 +28,8 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Header />
-      <Box display="flex" justifyContent='space-evenly' flexWrap='wrap'>
-        <Card></Card>
-        <Card></Card>
-        <Card></Card>
-        <Card></Card>
-        <Card></Card>
-        <Card></Card>
-      </Box>
+      {/* <Home/> */}
+      <Article></Article>
     </ThemeProvider>
   );
 }
