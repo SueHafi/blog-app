@@ -3,9 +3,10 @@ import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
 import Header from "./components/Header";
+import Card from "./components/Card";
+import Box from "@mui/material/Box";
 import CssBaseline from "@mui/material/CssBaseline";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
-import Typography from "@mui/material/Typography";
 
 const theme = createTheme({
   palette: {
@@ -28,10 +29,15 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Header></Header>
-      <Typography variant="h2" component="h1" align="center" gutterBottom>
-        Articles
-      </Typography>
+      <Header />
+      <Box display="flex" justifyContent='space-evenly' flexWrap='wrap'>
+        <Card></Card>
+        <Card></Card>
+        <Card></Card>
+        <Card></Card>
+        <Card></Card>
+        <Card></Card>
+      </Box>
     </ThemeProvider>
   );
 }
