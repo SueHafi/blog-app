@@ -2,8 +2,9 @@ import "@fontsource/roboto/300.css";
 import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
-// import Home from "./components/Home";
-import Article from "./components/Article";
+// import HomePage from "./components/HomePage";
+// import ArticlePage from "./components/ArticlePage";
+import LoginPage from "./components/LoginPage";
 import CssBaseline from "@mui/material/CssBaseline";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 
@@ -28,8 +29,9 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      {/* <Home/> */}
-      <Article></Article>
+      {/* <HomePage/> */}
+      {/* <ArticlePage/> */}
+      <LoginPage></LoginPage>
     </ThemeProvider>
   );
 }
