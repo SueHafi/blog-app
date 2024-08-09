@@ -17,9 +17,11 @@ export default function Card({ img, alt, title, excerpt }: CardProps) {
       <CardActionArea>
         <CardMedia component="img" height="200" image={img} alt={alt} />
         <CardContent>
-          <Typography gutterBottom variant="h5" component="div">{title}
+          <Typography gutterBottom variant="h5" component="div">
+            {title}
           </Typography>
-          <Typography variant="body2" color="text.secondary">{excerpt}
+          <Typography variant="body2" color="text.secondary">
+            {excerpt}
           </Typography>
         </CardContent>
       </CardActionArea>
