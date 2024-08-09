@@ -25,7 +25,7 @@ export default function Article() {
             maxWidth: { xs: 300, md: 800 },
           }}
           alt="test image"
-          src="/blogImages/mobile.jpg"
+          src="/blogImages/blog-img/mobile.jpg"
         />
         <Typography
           p="4"
