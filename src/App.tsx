@@ -3,9 +3,10 @@ import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
 // import HomePage from "./components/HomePage";
-// import ArticlePage from "./components/ArticlePage";
+import ArticlePage from "./components/ArticlePage";
 // import LoginPage from "./components/LoginPage";
-import NewBlogPage from "./components/NewBlogPage";
+// import NewBlogPage from "./components/NewBlogPage";
+import Header from './components/Header';
 import CssBaseline from "@mui/material/CssBaseline";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 
@@ -30,10 +31,11 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
+      <Header/>
       {/* <HomePage/> */}
-      {/* <ArticlePage/> */}
+      <ArticlePage/>
       {/* <LoginPage/> */}
-      <NewBlogPage/>
+      {/* <NewBlogPage/> */}
     </ThemeProvider>
   );
 }

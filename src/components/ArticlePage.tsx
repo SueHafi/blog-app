@@ -1,4 +1,3 @@
-import Header from "./Header";
 import { Box } from "@mui/material";
 import Typography from "@mui/material/Typography";
 import styled from "styled-components";
@@ -13,7 +12,6 @@ const Text = styled.pre`
 export default function Article() {
   return (
     <>
-      <Header />
       <Box maxWidth={1000} mx="auto" p={3} mb={3}>
         <Box
           display="block"
