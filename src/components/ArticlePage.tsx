@@ -2,6 +2,7 @@ import { Box } from "@mui/material";
 import Typography from "@mui/material/Typography";
 import styled from "styled-components";
 import { blogData } from "../utils";
+import { format } from "date-fns";
 
 const Text = styled.pre`
   white-space: pre-wrap;
@@ -39,7 +40,7 @@ export default function Article() {
         </Typography>
         <Box display="flex" justifyContent="center" gap={1}>
           <Typography>By {blogData[0].author}</Typography>
-          <Typography>| {blogData[0].createdAt}</Typography>
+          <Typography>| {format(new Date(blogData[0].createdAt), "do MMMM yyyy")}</Typography>
         </Box>
         <Text>{blogData[0].content}</Text>
       </Box>
