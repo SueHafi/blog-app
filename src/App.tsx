@@ -4,7 +4,8 @@ import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
 // import HomePage from "./components/HomePage";
 // import ArticlePage from "./components/ArticlePage";
-import LoginPage from "./components/LoginPage";
+// import LoginPage from "./components/LoginPage";
+import NewBlogPage from "./components/NewBlogPage";
 import CssBaseline from "@mui/material/CssBaseline";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 
@@ -31,7 +32,8 @@ function App() {
       <CssBaseline />
       {/* <HomePage/> */}
       {/* <ArticlePage/> */}
-      <LoginPage></LoginPage>
+      {/* <LoginPage/> */}
+      <NewBlogPage/>
     </ThemeProvider>
   );
 }
