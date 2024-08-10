@@ -2,12 +2,12 @@ import "@fontsource/roboto/300.css";
 import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
-// import HomePage from "./components/HomePage";
-import ArticlePage from "./components/ArticlePage";
+import CssBaseline from "@mui/material/CssBaseline";
+import HomePage from "./components/HomePage";
+// import ArticlePage from "./components/ArticlePage";
 // import LoginPage from "./components/LoginPage";
 // import NewBlogPage from "./components/NewBlogPage";
-import Header from './components/Header';
-import CssBaseline from "@mui/material/CssBaseline";
+import Header from "./components/Header";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 
 const theme = createTheme({
@@ -31,9 +31,9 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Header/>
-      {/* <HomePage/> */}
-      <ArticlePage/>
+      <Header />
+      <HomePage />
+      {/* <ArticlePage/> */}
       {/* <LoginPage/> */}
       {/* <NewBlogPage/> */}
     </ThemeProvider>

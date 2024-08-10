@@ -1,9 +1,21 @@
 import Card from "./Card";
 import Box from "@mui/material/Box";
 import { Typography } from "@mui/material";
-import { blogData } from "../utils";
+import { getData, Article } from "../utils";
+import { useState, useEffect } from "react";
 
 export default function Home() {
+  const [articleData, setArticleData] = useState<Article[]>([]);
+
+  useEffect(() => {
+    async function callData() {
+      const data = await getData();
+      setArticleData(data);
+      console.log(data);
+    }
+    callData();
+  }, []);
+
   return (
     <>
       <Box maxWidth={1000} mx="auto" p={3} mb={3}>
@@ -22,7 +34,7 @@ export default function Home() {
           gap={3}
           rowGap={8}
         >
-          {blogData.map((element, i) => {
+          {articleData.map((element, i) => {
             return (
               <Card
                 key={i}
