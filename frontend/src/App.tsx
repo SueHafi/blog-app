@@ -1,43 +1,8 @@
-import "@fontsource/roboto/300.css";
-import "@fontsource/roboto/400.css";
-import "@fontsource/roboto/500.css";
-import "@fontsource/roboto/700.css";
-import CssBaseline from "@mui/material/CssBaseline";
-import HomePage from "./components/HomePage";
-// import ArticlePage from "./components/ArticlePage";
-// import LoginPage from "./components/LoginPage";
-// import NewBlogPage from "./components/NewBlogPage";
-import Header from "./components/Header";
-import { ThemeProvider, createTheme } from "@mui/material/styles";
-
-const theme = createTheme({
-  palette: {
-    primary: {
-      light: "#af52bf",
-      main: "#9c27b0",
-      dark: "#6d1b7b",
-      contrastText: "#fff",
-    },
-    secondary: {
-      light: "#834bff",
-      main: "#651fff",
-      dark: "#4615b2",
-      contrastText: "#fff",
-    },
-  },
-});
+import { RouterProvider } from "react-router-dom";
+import { router } from "./Routes";
 
 function App() {
-  return (
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <Header />
-      <HomePage />
-      {/* <ArticlePage/> */}
-      {/* <LoginPage/> */}
-      {/* <NewBlogPage/> */}
-    </ThemeProvider>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;

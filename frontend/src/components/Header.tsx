@@ -15,13 +15,13 @@ import Button from "@mui/material/Button";
 
 type HeaderProps = {
   window?: () => Window;
-}
+};
 
 const drawerWidth = 240;
 const navItems = [
   { label: "Home", href: "/" },
   { label: "Login", href: "/" },
-  { label: "Create Post", href: "/new" },
+  { label: "Create Post", href: "/articles/new" },
 ];
 
 export default function Header(props: HeaderProps) {
