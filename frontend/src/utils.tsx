@@ -6,6 +6,7 @@ export type Article = {
   content: string;
   author: string;
   createdAt: string;
+  id: number;
 };
 
 type Articles = Article[];

@@ -19,7 +19,6 @@ export default function ArticlePage() {
     async function callData() {
       const data = await getData();
       setArticleData(data);
-      console.log(data);
     }
     callData();
   }, []);

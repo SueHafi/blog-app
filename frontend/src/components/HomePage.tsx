@@ -11,7 +11,6 @@ export default function Home() {
     async function callData() {
       const data = await getData();
       setArticleData(data);
-      console.log(data);
     }
     callData();
   }, []);
@@ -42,6 +41,7 @@ export default function Home() {
                 alt={element.alt}
                 title={element.title}
                 excerpt={element.excerpt}
+                id={element.id}
               />
             );
           })}

@@ -18,7 +18,7 @@ app.get("/articles", (req, res) => {
 
 app.get("/article", (req, res) => {
   res.json(blogData);
-})
+});
 
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);

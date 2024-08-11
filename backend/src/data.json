@@ -6,7 +6,8 @@
     "excerpt": "Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica",
     "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,\\n            accusamus odit dolores esse doloremque eum qui, aperiam earum magni\\n            officia unde, dolor veniam est odio harum iste ex pariatur sunt!\\n  \\n            Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,\\n            accusamus odit dolores esse doloremque eum qui, aperiam earum magni\\n            officia unde, dolor veniam est odio harum iste ex pariatur sunt!\\n  \\n            Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,\\n            accusamus odit dolores esse doloremque eum qui, aperiam earum magni\\n            officia unde, dolor veniam est odio harum iste ex pariatur sunt!",
     "author": "Jake Roman",
-    "createdAt": "2024-08-08"
+    "createdAt": "2024-08-08",
+    "id": 1
   },
   {
     "img": "/blogImages/glasses.jpg",
@@ -15,7 +16,8 @@
     "excerpt": "Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica",
     "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,\\n            accusamus odit dolores esse doloremque eum qui, aperiam earum magni\\n            officia unde, dolor veniam est odio harum iste ex pariatur sunt!\\n  \\n            Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,\\n            accusamus odit dolores esse doloremque eum qui, aperiam earum magni\\n            officia unde, dolor veniam est odio harum iste ex pariatur sunt!\\n  \\n            Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,\\n            accusamus odit dolores esse doloremque eum qui, aperiam earum magni\\n            officia unde, dolor veniam est odio harum iste ex pariatur sunt!",
     "author": "Greta Booker",
-    "createdAt": "2024-06-11"
+    "createdAt": "2024-06-11",
+    "id": 2
   },
   {
     "img": "/blogImages/seo.jpg",
@@ -24,7 +26,8 @@
     "excerpt": "Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica",
     "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,\\n            accusamus odit dolores esse doloremque eum qui, aperiam earum magni\\n            officia unde, dolor veniam est odio harum iste ex pariatur sunt!\\n  \\n            Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,\\n            accusamus odit dolores esse doloremque eum qui, aperiam earum magni\\n            officia unde, dolor veniam est odio harum iste ex pariatur sunt!\\n  \\n            Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,\\n            accusamus odit dolores esse doloremque eum qui, aperiam earum magni\\n            officia unde, dolor veniam est odio harum iste ex pariatur sunt!",
     "author": "Meghan Adkins",
-    "createdAt": "2023-02-20"
+    "createdAt": "2023-02-20",
+    "id": 3
   },
   {
     "img": "/blogImages/chatgpt.jpg",
@@ -33,7 +36,8 @@
     "excerpt": "Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica",
     "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,\\n            accusamus odit dolores esse doloremque eum qui, aperiam earum magni\\n            officia unde, dolor veniam est odio harum iste ex pariatur sunt!\\n  \\n            Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,\\n            accusamus odit dolores esse doloremque eum qui, aperiam earum magni\\n            officia unde, dolor veniam est odio harum iste ex pariatur sunt!\\n  \\n            Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,\\n            accusamus odit dolores esse doloremque eum qui, aperiam earum magni\\n            officia unde, dolor veniam est odio harum iste ex pariatur sunt!",
     "author": "Ike Hammond",
-    "createdAt": "2022-09-03"
+    "createdAt": "2022-09-03",
+    "id": 4
   },
   {
     "img": "/blogImages/browser.jpg",
@@ -42,7 +46,8 @@
     "excerpt": "Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica",
     "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,\\n            accusamus odit dolores esse doloremque eum qui, aperiam earum magni\\n            officia unde, dolor veniam est odio harum iste ex pariatur sunt!\\n  \\n            Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,\\n            accusamus odit dolores esse doloremque eum qui, aperiam earum magni\\n            officia unde, dolor veniam est odio harum iste ex pariatur sunt!\\n  \\n            Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,\\n            accusamus odit dolores esse doloremque eum qui, aperiam earum magni\\n            officia unde, dolor veniam est odio harum iste ex pariatur sunt!",
     "author": "Carroll Gonzalez",
-    "createdAt": "2022-08-23"
+    "createdAt": "2022-08-23",
+    "id": 5
   },
   {
     "img": "/blogImages/mobile.jpg",
@@ -51,7 +56,8 @@
     "excerpt": "Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica",
     "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,\\n            accusamus odit dolores esse doloremque eum qui, aperiam earum magni\\n            officia unde, dolor veniam est odio harum iste ex pariatur sunt!\\n  \\n            Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,\\n            accusamus odit dolores esse doloremque eum qui, aperiam earum magni\\n            officia unde, dolor veniam est odio harum iste ex pariatur sunt!\\n  \\n            Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,\\n            accusamus odit dolores esse doloremque eum qui, aperiam earum magni\\n            officia unde, dolor veniam est odio harum iste ex pariatur sunt!",
     "author": "Johnny Landry",
-    "createdAt": "2022-08-23"
+    "createdAt": "2022-08-23",
+    "id": 6
   },
   {
     "img": "/blogImages/apple.jpg",
@@ -60,7 +66,8 @@
     "excerpt": "Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica",
     "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,\\n            accusamus odit dolores esse doloremque eum qui, aperiam earum magni\\n            officia unde, dolor veniam est odio harum iste ex pariatur sunt!\\n  \\n            Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,\\n            accusamus odit dolores esse doloremque eum qui, aperiam earum magni\\n            officia unde, dolor veniam est odio harum iste ex pariatur sunt!\\n  \\n            Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,\\n            accusamus odit dolores esse doloremque eum qui, aperiam earum magni\\n            officia unde, dolor veniam est odio harum iste ex pariatur sunt!",
     "author": "Barbra Williamson",
-    "createdAt": "2022-05-04"
+    "createdAt": "2022-05-04",
+    "id": 7
   },
   {
     "img": "/blogImages/react.jpg",
@@ -69,7 +76,8 @@
     "excerpt": "Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica",
     "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,\\n            accusamus odit dolores esse doloremque eum qui, aperiam earum magni\\n            officia unde, dolor veniam est odio harum iste ex pariatur sunt!\\n  \\n            Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,\\n            accusamus odit dolores esse doloremque eum qui, aperiam earum magni\\n            officia unde, dolor veniam est odio harum iste ex pariatur sunt!\\n  \\n            Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,\\n            accusamus odit dolores esse doloremque eum qui, aperiam earum magni\\n            officia unde, dolor veniam est odio harum iste ex pariatur sunt!",
     "author": "Ophelia Hamilton",
-    "createdAt": "2022-04-17"
+    "createdAt": "2022-04-17",
+    "id": 8
   },
   {
     "img": "/blogImages/keyboard.jpg",
@@ -78,7 +86,8 @@
     "excerpt": "Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica",
     "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,\\n            accusamus odit dolores esse doloremque eum qui, aperiam earum magni\\n            officia unde, dolor veniam est odio harum iste ex pariatur sunt!\\n  \\n            Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,\\n            accusamus odit dolores esse doloremque eum qui, aperiam earum magni\\n            officia unde, dolor veniam est odio harum iste ex pariatur sunt!\\n  \\n            Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,\\n            accusamus odit dolores esse doloremque eum qui, aperiam earum magni\\n            officia unde, dolor veniam est odio harum iste ex pariatur sunt!",
     "author": "Alva Gregory",
-    "createdAt": "2021-12-25"
+    "createdAt": "2021-12-25",
+    "id": 9
   },
   {
     "img": "/blogImages/letters.jpg",
@@ -87,7 +96,8 @@
     "excerpt": "Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica",
     "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,\\n            accusamus odit dolores esse doloremque eum qui, aperiam earum magni\\n            officia unde, dolor veniam est odio harum iste ex pariatur sunt!\\n  \\n            Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,\\n            accusamus odit dolores esse doloremque eum qui, aperiam earum magni\\n            officia unde, dolor veniam est odio harum iste ex pariatur sunt!\\n  \\n            Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,\\n            accusamus odit dolores esse doloremque eum qui, aperiam earum magni\\n            officia unde, dolor veniam est odio harum iste ex pariatur sunt!",
     "author": "Gavin Perez",
-    "createdAt": "2021-08-12"
+    "createdAt": "2021-08-12",
+    "id": 10
   },
   {
     "img": "/blogImages/python.jpg",
@@ -96,7 +106,8 @@
     "excerpt": "Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica",
     "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,\\n            accusamus odit dolores esse doloremque eum qui, aperiam earum magni\\n            officia unde, dolor veniam est odio harum iste ex pariatur sunt!\\n  \\n            Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,\\n            accusamus odit dolores esse doloremque eum qui, aperiam earum magni\\n            officia unde, dolor veniam est odio harum iste ex pariatur sunt!\\n  \\n            Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,\\n            accusamus odit dolores esse doloremque eum qui, aperiam earum magni\\n            officia unde, dolor veniam est odio harum iste ex pariatur sunt!",
     "author": "Charlie Mcmahon",
-    "createdAt": "2020-11-21"
+    "createdAt": "2020-11-21",
+    "id": 11
   },
   {
     "img": "/blogImages/git.jpg",
@@ -105,6 +116,7 @@
     "excerpt": "Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica",
     "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,\\n            accusamus odit dolores esse doloremque eum qui, aperiam earum magni\\n            officia unde, dolor veniam est odio harum iste ex pariatur sunt!\\n  \\n            Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,\\n            accusamus odit dolores esse doloremque eum qui, aperiam earum magni\\n            officia unde, dolor veniam est odio harum iste ex pariatur sunt!\\n  \\n            Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,\\n            accusamus odit dolores esse doloremque eum qui, aperiam earum magni\\n            officia unde, dolor veniam est odio harum iste ex pariatur sunt!",
     "author": "Joe Tucker",
-    "createdAt": "2020-07-18"
+    "createdAt": "2020-07-18",
+    "id": 12
   }
 ]

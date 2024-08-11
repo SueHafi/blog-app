@@ -9,9 +9,10 @@ type CardProps = {
   alt: string;
   title: string;
   excerpt: string;
+  id: number;
 };
 
-export default function Card({ img, alt, title, excerpt }: CardProps) {
+export default function Card({ img, alt, title, excerpt, id }: CardProps) {
   return (
     <MuiCard>
       <CardActionArea>
@@ -26,7 +27,7 @@ export default function Card({ img, alt, title, excerpt }: CardProps) {
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button size="small" color="primary">
+        <Button size="small" color="primary" href={`/articles/${id}`}>
           View article
         </Button>
       </CardActions>
