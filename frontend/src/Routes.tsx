@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import HomePage from "./components/HomePage";
 import NewBlogPage from "./components/NewBlogPage";
 import ArticlePage from "./components/ArticlePage";
+import NotFoundPage from "./components/NotFoundPage";
 import Root from "./Root";
 
 export const router = createBrowserRouter([
@@ -18,8 +19,12 @@ export const router = createBrowserRouter([
         element: <NewBlogPage />,
       },
       {
-        path: "/articles/1",
+        path: "/articles/:id",
         element: <ArticlePage />,
+      },
+      {
+        path: "/*",
+        element: <NotFoundPage />,
       },
     ],
   },
