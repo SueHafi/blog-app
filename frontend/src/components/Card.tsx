@@ -27,7 +27,7 @@ export default function Card({ img, alt, title, excerpt, id }: CardProps) {
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button size="small" color="primary" href={`/articles/${id}`}>
+        <Button size="medium" color="primary" href={`/articles/${id}`}>
           View article
         </Button>
       </CardActions>

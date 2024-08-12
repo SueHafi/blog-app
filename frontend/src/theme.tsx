@@ -29,6 +29,11 @@ export const theme = createTheme({
       contrastText: "#fff",
     },
   },
+  typography: {
+    subtitle1: {
+      fontSize: 18,
+    },
+  },
   components: {
     MuiLink: {
       defaultProps: {
