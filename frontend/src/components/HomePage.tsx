@@ -1,15 +1,15 @@
 import Card from "./Card";
 import Box from "@mui/material/Box";
 import { Typography } from "@mui/material";
-import { getData, Article } from "../utils";
+import { getArticleSummariesData, ArticleSummary } from "../utils";
 import { useState, useEffect } from "react";
 
 export default function Home() {
-  const [articleData, setArticleData] = useState<Article[]>([]);
+  const [articleData, setArticleData] = useState<ArticleSummary[]>([]);
 
   useEffect(() => {
     async function callData() {
-      const data = await getData();
+      const data = await getArticleSummariesData();
       setArticleData(data);
     }
     callData();

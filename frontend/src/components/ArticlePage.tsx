@@ -1,11 +1,11 @@
 import { Box } from "@mui/material";
 import Typography from "@mui/material/Typography";
 import styled from "styled-components";
-import { getData, Article } from "../utils";
+import { getArticleData, Article } from "../utils";
 import { format } from "date-fns";
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
 import NotFoundPage from "./NotFoundPage";
+import { useParams } from "react-router-dom";
 
 const Text = styled.pre`
   white-space: pre-wrap;
@@ -19,22 +19,20 @@ export default function ArticlePage() {
     img: "",
     alt: "",
     title: "",
-    excerpt: "",
     content: "",
     author: "",
     createdAt: "",
     id: -1,
   });
+
   let { id } = useParams();
+  const idNum = Number(id);
 
   useEffect(() => {
     async function callData() {
-      const data = await getData();
-      const idNum = Number(id);
-
-      const article = data.find((data) => data.id === idNum);
-      if (article) {
-        setCurrentArticle(article);
+      const data = await getArticleData(idNum);
+      if (data) {
+        setCurrentArticle(data);
       } else {
         setCurrentArticle(null);
       }

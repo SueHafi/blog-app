@@ -13,11 +13,48 @@ app.get("/", (req, res) => {
 });
 
 app.get("/articles", (req, res) => {
-  res.json(blogData);
+  console.log(req.params);
+  const dataToSend = blogData.map((element) => {
+    const mappedData = {
+      img: element.img,
+      alt: element.alt,
+      title: element.title,
+      excerpt: element.excerpt,
+      id: element.id,
+    };
+    return mappedData;
+  });
+  res.json(dataToSend);
 });
 
-app.get("/article", (req, res) => {
-  res.json(blogData);
+app.get("/articles/:id", (req, res) => {
+  const id = req.params.id;
+  const idNum = Number(id);
+  if (!isNaN(idNum)) {
+    const elementMatchingData = blogData.find((element) => {
+      return element.id === idNum;
+    });
+    if (elementMatchingData) {
+      const mappedData = {
+        img: elementMatchingData.img,
+        alt: elementMatchingData.alt,
+        title: elementMatchingData.title,
+        content: elementMatchingData.content,
+        author: elementMatchingData.author,
+        createdAt: elementMatchingData.createdAt,
+        id: elementMatchingData.id,
+      };
+      res.json(mappedData);
+    } else {
+      res.status(404).json({
+        errorMessage: `Article with id ${idNum} does not exist`,
+      });
+    }
+  } else {
+    res.status(400).json({
+      errorMessage: `ID parameter must be a number`
+    })
+  }
 });
 
 app.listen(port, () => {
