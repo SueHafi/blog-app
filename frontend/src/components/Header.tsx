@@ -13,7 +13,7 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import { useContext, memo } from "react";
-import { PostCountContext } from "../PostCountContext";
+import { UserContext } from "../UserContext";
 
 type HeaderProps = {
   window?: () => Window;
@@ -29,7 +29,7 @@ const navItems = [
 export default memo(function Header(props: HeaderProps) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
-  const postCount = useContext(PostCountContext);
+  const user = useContext(UserContext); //change later to say hello user when logged in
 
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
@@ -73,9 +73,9 @@ export default memo(function Header(props: HeaderProps) {
             component="div"
             sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
           >
-            Blog App
+             Blog App
           </Typography>
-          <Typography>{`Number of posts: ${postCount}`}</Typography>
+          <Typography sx={{ fontWeight: 'light' }}>{`Welcome ${user.firstName} |`}</Typography>
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
             {navItems.map((item) => (
               <Button key={item.label} sx={{ color: "#fff" }} href={item.href}>

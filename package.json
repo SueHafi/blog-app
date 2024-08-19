@@ -3,6 +3,7 @@
     "nodemon": "^3.1.4"
   },
   "dependencies": {
-    "cors": "^2.8.5"
+    "cors": "^2.8.5",
+    "fns": "^1.0.0"
   }
 }

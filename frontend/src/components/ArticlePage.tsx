@@ -6,8 +6,6 @@ import { format } from "date-fns";
 import { useState, useEffect } from "react";
 import NotFoundPage from "./NotFoundPage";
 import { useParams } from "react-router-dom";
-import { useContext } from "react";
-import { UserContext } from "../UserContext";
 
 const Text = styled.pre`
   white-space: pre-wrap;
@@ -17,7 +15,6 @@ const Text = styled.pre`
 `;
 
 export default function ArticlePage() {
-  const user = useContext(UserContext);
   const [currentArticle, setCurrentArticle] = useState<Article | null>({
     img: "",
     alt: "",
@@ -45,7 +42,6 @@ export default function ArticlePage() {
 
   return (
     <>
-      <h1>{`Welcome ${user.firstName}`}</h1>
       {currentArticle ? (
         <Box maxWidth={1000} mx="auto" p={3} mb={3}>
           <Box

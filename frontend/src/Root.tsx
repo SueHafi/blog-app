@@ -11,8 +11,6 @@ import { UserContext } from "./UserContext";
 import { PostCountContext } from "./PostCountContext";
 import { useState } from "react";
 
-// const users = [{ name: "Sue" }, { name: "Spyros" }, { name: "Alice" }];
-
 export default function Root() {
   const [postCount, setPostCount] = useState(null);
   const user = {

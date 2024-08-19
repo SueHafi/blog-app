@@ -2,12 +2,14 @@ import Card from "./Card";
 import Box from "@mui/material/Box";
 import { Typography } from "@mui/material";
 import { getArticleSummariesData, ArticleSummary } from "../utils";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { useOutletContext } from "react-router-dom";
+import { PostCountContext } from "../PostCountContext";
 
 export default function Home() {
   const [articleData, setArticleData] = useState<ArticleSummary[]>([]);
-  const setPostCount = useOutletContext() as (x:number)=>void;
+  const setPostCount = useOutletContext() as (x: number) => void;
+  const postCount = useContext(PostCountContext);
 
   useEffect(() => {
     async function callData() {
@@ -30,6 +32,11 @@ export default function Home() {
         >
           Articles
         </Typography>
+        <Typography
+          fontWeight="light"
+          textAlign={"right"}
+          sx={{ mb: 2}}
+        >{` Number of posts: ${postCount}`}</Typography>
         <Box
           display="grid"
           gridTemplateColumns="repeat(auto-fit, minmax(300px, 1fr))"
