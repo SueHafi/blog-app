@@ -8,6 +8,10 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
+function generateId() {
+  
+}
+
 app.get("/", (req, res) => {
   res.send("I'm working");
 });
@@ -24,6 +28,13 @@ app.get("/articles", (req, res) => {
     return mappedData;
   });
   res.json(dataToSend);
+});
+
+app.post("/articles", (req, res) => {
+  const newArticleData = req.body;
+  console.log(blogData.length);
+  blogData.push(newArticleData);
+  console.log(blogData);
 });
 
 app.get("/articles/:id", (req, res) => {

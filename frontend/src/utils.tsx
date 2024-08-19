@@ -16,7 +16,7 @@ export type ArticleSummary = {
   id: number;
 };
 
-const baseUrl = "http://localhost:3000";
+export const baseUrl = "http://localhost:3000";
 
 export async function getArticleSummariesData(): Promise<ArticleSummary[]> {
   let url = `${baseUrl}/articles`;

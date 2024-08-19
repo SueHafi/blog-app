@@ -1,6 +1,7 @@
 import { Box, TextField, Button } from "@mui/material";
-import { FormEvent, ChangeEvent } from "react";
+import { FormEvent, ChangeEvent} from "react";
 import { useState } from "react";
+import { baseUrl } from "../utils";
 
 export default function NewBlogPage() {
   const [formData, setFormData] = useState({
@@ -9,14 +10,21 @@ export default function NewBlogPage() {
     excerpt: "",
     content: "",
   });
+
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
+    const url = `${baseUrl}/articles`;
+    fetch(url, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(formData),
+    });
   }
 
   function handleFormDataChange(
     event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) {
-    const newFormData = { ...formData };
+    const newFormData = { ...formData};
     const elementName = event.target.name as keyof typeof formData;
     newFormData[elementName] = event.target.value;
     setFormData(newFormData);
@@ -45,6 +53,7 @@ export default function NewBlogPage() {
           value={formData.title}
           onChange={handleFormDataChange}
           variant="outlined"
+          required
         />
         <TextField
           margin="normal"
@@ -66,6 +75,7 @@ export default function NewBlogPage() {
           value={formData.excerpt}
           onChange={handleFormDataChange}
           multiline
+          required
         />
         <TextField
           margin="normal"
@@ -77,9 +87,10 @@ export default function NewBlogPage() {
           value={formData.content}
           onChange={handleFormDataChange}
           multiline
+          required
         />
         <Box>
-          <Button type="submit" variant="outlined">
+          <Button type="submit" variant="outlined" sx={{ mt: 2 }}>
             Submit blog post
           </Button>
         </Box>
