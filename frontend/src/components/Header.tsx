@@ -12,6 +12,8 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
+import { useContext, memo } from "react";
+import { PostCountContext } from "../PostCountContext";
 
 type HeaderProps = {
   window?: () => Window;
@@ -24,9 +26,10 @@ const navItems = [
   { label: "Create Post", href: "/articles/new" },
 ];
 
-export default function Header(props: HeaderProps) {
+export default memo(function Header(props: HeaderProps) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
+  const postCount = useContext(PostCountContext);
 
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
@@ -72,6 +75,7 @@ export default function Header(props: HeaderProps) {
           >
             Blog App
           </Typography>
+          <Typography>{`Number of posts: ${postCount}`}</Typography>
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
             {navItems.map((item) => (
               <Button key={item.label} sx={{ color: "#fff" }} href={item.href}>
@@ -103,4 +107,4 @@ export default function Header(props: HeaderProps) {
       </nav>
     </Box>
   );
-}
+});

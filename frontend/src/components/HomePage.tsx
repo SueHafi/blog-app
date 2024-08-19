@@ -3,13 +3,16 @@ import Box from "@mui/material/Box";
 import { Typography } from "@mui/material";
 import { getArticleSummariesData, ArticleSummary } from "../utils";
 import { useState, useEffect } from "react";
+import { useOutletContext } from "react-router-dom";
 
 export default function Home() {
   const [articleData, setArticleData] = useState<ArticleSummary[]>([]);
+  const setPostCount = useOutletContext() as (x:number)=>void;
 
   useEffect(() => {
     async function callData() {
       const data = await getArticleSummariesData();
+      setPostCount(data.length);
       setArticleData(data);
     }
     callData();
