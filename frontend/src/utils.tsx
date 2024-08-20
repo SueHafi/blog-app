@@ -1,3 +1,11 @@
+export function calculatePageCount(postCount: number | null): number {
+  let pageCount = 1;
+  if (postCount && postCount > 0) {
+    pageCount = Math.ceil(postCount / 6);
+  }
+  return pageCount;
+}
+
 export type Article = {
   img: string;
   alt: string;

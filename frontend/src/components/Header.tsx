@@ -14,6 +14,7 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import { useContext, memo } from "react";
 import { UserContext } from "../UserContext";
+import { Link } from "@mui/material";
 
 type HeaderProps = {
   window?: () => Window;
@@ -36,9 +37,12 @@ export default memo(function Header(props: HeaderProps) {
   };
 
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
+    <Box
+      onClick={handleDrawerToggle}
+      sx={{ textAlign: "center", color: "inherit", textDecoration: "none" }}
+    >
       <Typography variant="h6" sx={{ my: 2 }}>
-        Blog App
+        <Link href="/">Blog App</Link>
       </Typography>
       <Divider />
       <List>
@@ -70,12 +74,20 @@ export default memo(function Header(props: HeaderProps) {
           </IconButton>
           <Typography
             variant="h6"
-            component="div"
-            sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
+            component="a"
+            sx={{
+              flexGrow: 1,
+              display: { xs: "none", sm: "block" },
+              color: "inherit",
+              textDecoration: "none",
+            }}
+            href="/"
           >
-             Blog App
+            Blog App
           </Typography>
-          <Typography sx={{ fontWeight: 'light' }}>{`Welcome ${user.firstName} |`}</Typography>
+          <Typography
+            sx={{ fontWeight: "light" }}
+          >{`Welcome ${user.firstName} |`}</Typography>
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
             {navItems.map((item) => (
               <Button key={item.label} sx={{ color: "#fff" }} href={item.href}>
