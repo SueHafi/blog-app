@@ -1,6 +1,10 @@
 import cors from "cors";
 import express from "express";
-import blogData from "./data.json";
+import { z, ZodError } from "zod";
+import blogData from "./blogData.json";
+import imageData from "./imageData.json";
+import { getRandomElement, setupIdGenerator } from "./utils";
+
 const app = express();
 const port = 3000;
 
@@ -8,9 +12,9 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-function generateId() {
-  
-}
+const initialHighestId = Math.max(...blogData.map((article) => article.id));
+
+const generateId = setupIdGenerator(initialHighestId);
 
 app.get("/", (req, res) => {
   res.send("I'm working");
@@ -30,11 +34,50 @@ app.get("/articles", (req, res) => {
   res.json(dataToSend);
 });
 
+const createArticleSchema = z.object({
+  title: z.string().trim().min(1),
+  author: z.string().trim(),
+  excerpt: z.string().trim().min(1),
+  content: z.string().trim().min(1),
+});
+
 app.post("/articles", (req, res) => {
-  const newArticleData = req.body;
-  console.log(blogData.length);
-  blogData.push(newArticleData);
-  console.log(blogData);
+  let title;
+  let author;
+  let excerpt;
+  let content;
+
+  try {
+    const valid = createArticleSchema.parse(req.body);
+    title = valid.title;
+    author = valid.author;
+    excerpt = valid.excerpt;
+    content = valid.content;
+  } catch (error) {
+    if (error instanceof ZodError) {
+      res.status(400).json({
+        errorMessage: error.issues[0].message,
+        errorProperty: error.issues[0].path[0],
+      });
+    }
+    return;
+  }
+
+  const id = generateId();
+  const { alt, img } = getRandomElement(imageData);
+  const createdAt = new Date().toISOString();
+  const newArticle = {
+    title,
+    author,
+    excerpt,
+    content,
+    id,
+    img,
+    alt,
+    createdAt,
+  };
+  blogData.push(newArticle);
+  res.status(201).json(newArticle);
 });
 
 app.get("/articles/:id", (req, res) => {
