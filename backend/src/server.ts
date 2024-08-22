@@ -3,7 +3,11 @@ import express from "express";
 import { z, ZodError } from "zod";
 import blogData from "./blogData.json";
 import imageData from "./imageData.json";
-import { getRandomElement, setupIdGenerator } from "./utils";
+import {
+  getRandomElement,
+  setupIdGenerator,
+  descendingDateSorter,
+} from "./utils";
 
 const app = express();
 const port = 3000;
@@ -21,7 +25,9 @@ app.get("/", (req, res) => {
 });
 
 app.get("/articles", (req, res) => {
-  const dataToSend = blogData.map((element) => {
+  const copiedBlogData = [...blogData];
+  copiedBlogData.sort(descendingDateSorter);
+  const dataToSend = copiedBlogData.map((element) => {
     const mappedData = {
       img: element.img,
       alt: element.alt,
@@ -29,6 +35,7 @@ app.get("/articles", (req, res) => {
       excerpt: element.excerpt,
       id: element.id,
     };
+
     return mappedData;
   });
   res.json(dataToSend);
