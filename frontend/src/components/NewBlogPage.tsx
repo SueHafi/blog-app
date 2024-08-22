@@ -1,9 +1,10 @@
-import { Box, TextField, Button } from "@mui/material";
-import { FormEvent, ChangeEvent} from "react";
-import { useState } from "react";
+import { Box, TextField, Button, Typography } from "@mui/material";
+import { FormEvent, ChangeEvent, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { baseUrl } from "../utils";
 
 export default function NewBlogPage() {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     title: "",
     author: "",
@@ -11,20 +12,22 @@ export default function NewBlogPage() {
     content: "",
   });
 
-  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     const url = `${baseUrl}/articles`;
-    fetch(url, {
+    const response = await fetch(url, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(formData),
     });
+    await response.json();
+    navigate("/");
   }
 
   function handleFormDataChange(
     event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) {
-    const newFormData = { ...formData};
+    const newFormData = { ...formData };
     const elementName = event.target.name as keyof typeof formData;
     newFormData[elementName] = event.target.value;
     setFormData(newFormData);
@@ -32,6 +35,9 @@ export default function NewBlogPage() {
 
   return (
     <>
+      <Typography sx={{ ml: 2 }} component="h2" variant="h2">
+        Create a new blog post
+      </Typography>
       <Box
         onSubmit={handleSubmit}
         display="inline-flex"
